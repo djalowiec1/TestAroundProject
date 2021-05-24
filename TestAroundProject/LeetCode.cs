@@ -16,7 +16,7 @@ namespace TestAroundProject
                 //if needle bigger neevr find
                 if (hayStack.Length < needle.Length)
                 {
-                    found = true;  
+                    found = true;
                     location = -1;
                 }
                     for (var i = 0; i < hayStack.Length && !found; i++)

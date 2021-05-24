@@ -77,43 +77,6 @@ namespace TestAroundProject
             return location;
 
         }
-        public int StrStrBetter(string haystack, string needle)
-        {
-            int location = 0;
-            bool done = false; 
 
-            if (haystack == null && needle == null)
-            {
-                location = 0;
-                done = true;
-            }
-            if(!done && haystack.Length < needle.Length)
-            {
-                location = -1; 
-                done = true;
-            }
-           for (var i = 0; i < haystack.Length && !done; i++)
-            {
-                for (var j = 0; i < needle.Length; j ++)
-                {
-                    if (haystack[i + j] == haystack[j])
-                    {
-                        if (j == needle.Length - 1)
-                        {
-                            Console.WriteLine("haystack: " + haystack + "\n" +
-                            "needle  : " + needle + "\n" +
-                            "result  : " + i);
-                            return i;
-                        }
-                    }
-                }
-            }
-
-            Console.WriteLine("haystack: " + haystack + "\n" +
-            "needle  : " + needle + "\n" +
-             "result  : " + location);
-
-            return location;
-        }
     }
 }
